@@ -13,3 +13,7 @@ end
 Then /^I should be thanked successfully$/ do
   page.must_have_content('merci beaucoup pour proposition !')
 end
+
+Then /^show me the page$/ do
+  save_and_open_page
+end
