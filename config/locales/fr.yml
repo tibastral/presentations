@@ -182,6 +182,7 @@ fr:
     created_at: "Créé le"
     updated_at: "Modifié le"
     name: "Nom"
+    title: "Titre"
 
   errors:
     format: "Le %{attribute} %{message}"

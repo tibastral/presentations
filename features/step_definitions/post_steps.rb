@@ -11,7 +11,7 @@ When /^I press "([^"]*)"$/ do |label|
 end
 
 Then /^I should be thanked successfully$/ do
-  page.must_have_content('merci beaucoup pour proposition !')
+  page.should have_content('merci beaucoup pour cette proposition !')
 end
 
 Then /^show me the page$/ do
