@@ -18,6 +18,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'haml'
+gem 'simple_form'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -33,4 +35,8 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
+  gem 'cucumber-rails'
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
