@@ -35,6 +35,8 @@ gem 'pg'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
+  # gem 'linecache19', :git => 'https://github.com/mark-moseley/linecache.git' 
+  # gem 'ruby-debug-base19', :git => 'https://github.com/mark-moseley/ruby-debug.git'
   # Pretty printed test output
   gem 'turn', '0.8.2', :require => false
   gem 'cucumber-rails'
