@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(:version => 20111205213251) do
   create_table "presentations", :force => true do |t|
     t.string   "name"
     t.string   "title"
+    t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

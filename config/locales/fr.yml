@@ -181,8 +181,8 @@ fr:
   attributes:
     created_at: "Créé le"
     updated_at: "Modifié le"
-    name: "Nom"
-    title: "Titre"
+    name: "Intervenant"
+    title: "Sujet de la présentation"
 
   errors:
     format: "Le %{attribute} %{message}"

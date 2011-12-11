@@ -1,4 +1,14 @@
+%h1 Appel à présentations
+.presentations
+  - @presentations.each do |presentation|
+    .presentation-el
+      = presentation.name
+      nous propose de parler de
+      = presentation.title
+
 = simple_form_for @presentation do |f|
-  = f.input :name
-  = f.input :title
+  %h2 Une idée de présentation ?
+  = f.input :name, placeholder: "John Doe"
+  = f.input :title, placeholder: "VCR"
+  = f.input :email, placeholder: "hello@world.com"
   = f.button :submit, "Créer"
