@@ -24,7 +24,10 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'simple_form'
 gem 'heroku'
-gem 'pg'
+gem 'squeel'
+
+gem 'activeadmin'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

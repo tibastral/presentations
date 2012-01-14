@@ -1,10 +1,19 @@
 %h1 Meetup ParisRb : Appel à présentations
 .presentations
+  %h2 Talks ayant eu lieu :
+  - @old_presentations.each do |presentation|
+    .presentation-el
+      = presentation.name
+      nous a parlé de
+      #{presentation.url.present? ? link_to(presentation.title, presentation.url) : presentation.title} (le #{presentation.occured_at})
+  
+  %h2 Talks proposés :
   - @presentations.each do |presentation|
     .presentation-el
       = presentation.name
       nous propose de parler de
       = presentation.title
+    
 
 = simple_form_for @presentation do |f|
   %h2 Une idée de présentation ?

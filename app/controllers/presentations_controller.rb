@@ -1,6 +1,7 @@
 class PresentationsController < ApplicationController
   def new
-    @presentations = Presentation.all
+    @old_presentations = Presentation.where{occured_at != nil}.order{occured_at.desc}
+    @presentations = Presentation.where{occured_at == nil}.order{occured_at.desc}
     @presentation = Presentation.new
   end
 
