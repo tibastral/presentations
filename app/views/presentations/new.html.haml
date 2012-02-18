@@ -20,4 +20,6 @@
   = f.input :name, placeholder: "John Doe"
   = f.input :title, placeholder: "VCR"
   = f.input :email, placeholder: "hello@world.com"
+  = f.input :difficulty, :collection => [['easy', 1], ['middle', 2], ['advanced', 3]]
+  = f.input :length, label: "Length (in minutes)"
   = f.button :submit, "Créer"
