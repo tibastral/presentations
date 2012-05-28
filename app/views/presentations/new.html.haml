@@ -2,7 +2,7 @@
 .presentations
   %h2 Talks ayant eu lieu :
   - @old_presentations.each do |presentation|
-    .presentation-el
+    %p.presentation-el
       %span.presenter= presentation.name
       nous a parlé de
       #{presentation.video_url.present? ? link_to(presentation.title, presentation.video_url) : presentation.title} (le #{presentation.occured_at})
@@ -10,7 +10,7 @@
   
   %h2 Talks proposés :
   - @presentations.each do |presentation|
-    .presentation-el
+    %p.presentation-el
       = presentation.name
       nous propose de parler de
       = presentation.title
