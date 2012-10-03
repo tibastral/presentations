@@ -13,15 +13,20 @@
 .presentations
   %h2 Talks proposés pour le prochain meetup:
   - @presentations.each do |presentation|
-    %p.presentation-el{class: format_oldness(presentation.created_at)}
-      = presentation.name
-      nous propose une présentation sur :
-      %br
-      = presentation.title
-      - if presentation.length && presentation.length < 6
-        (lightning talk)
-      - else
-        (durée : #{presentation.length || 20} min)
+    .presentation-el{class: format_oldness(presentation.created_at)}
+      .presentation
+        %h3
+          = presentation.title
+          - if presentation.length && presentation.length < 6
+            (lightning talk)
+          - else
+            (durée : #{presentation.length || 20} min)
+        proposé par #{presentation.name}
+      .difficulty
+        Niveau requis:
+        - (presentation.difficulty || 1).to_i.times do
+          = image_tag('ruby.png')
+      .clear
   %h2 Talks ayant eu lieu :
   - @old_presentations.each do |presentation|
     %p.presentation-el
