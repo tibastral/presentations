@@ -3,7 +3,7 @@
 = simple_form_for @presentation do |f|
   %h2 Une idée de présentation ?
   = f.input :name, label: "Nom", placeholder: "John Doe"
-  = f.input :title, label: "Titre de la présentation", placeholder: "VCR"
+  = f.input :title, label: "Titre de la présentation", placeholder: "VCR : enregistrer vos requêtes réseau et les rejouer"
   = f.input :email, placeholder: "hello@world.com"
   = f.input :difficulty, label: "Niveau", collection: [['facile', 1], ['intermédiaire', 2], ['avancé', 3]]
   = f.input :length, collection: [['5 min (lightning)', 5], ['20 min', 20]], label: "Durée"
@@ -15,8 +15,13 @@
   - @presentations.each do |presentation|
     %p.presentation-el{class: format_oldness(presentation.created_at)}
       = presentation.name
-      nous propose de parler de
+      nous propose une présentation sur :
+      %br
       = presentation.title
+      - if presentation.length && presentation.length < 6
+        (lightning talk)
+      - else
+        (durée : #{presentation.length || 20} min)
   %h2 Talks ayant eu lieu :
   - @old_presentations.each do |presentation|
     %p.presentation-el
