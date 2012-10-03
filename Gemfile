@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -12,13 +12,14 @@ gem 'pg'
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'sass-rails',   '~> 3.2.5'
-gem "compass", "0.12.alpha.0"
+gem 'sass-rails'
+gem "compass"
 group :assets do
-  gem 'coffee-rails', '~> 3.2.2'
-  gem 'uglifier', '>= 1.0.3'
+  gem 'coffee-rails'
+  gem 'uglifier'
 end
 
+gem "thin"
 gem 'jquery-rails'
 
 gem 'haml'
@@ -46,7 +47,7 @@ group :test do
   # gem 'linecache19', :git => 'https://github.com/mark-moseley/linecache.git' 
   # gem 'ruby-debug-base19', :git => 'https://github.com/mark-moseley/ruby-debug.git'
   # Pretty printed test output
-  gem 'turn', '0.8.2', :require => false
+  gem 'turn', :require => false
   gem 'cucumber-rails'
   gem 'capybara'
   gem 'rspec-rails'
