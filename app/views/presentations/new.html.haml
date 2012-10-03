@@ -1,5 +1,22 @@
 %h1 Meetup ParisRb : Appel à présentations
+
+= simple_form_for @presentation do |f|
+  %h2 Une idée de présentation ?
+  = f.input :name, label: "Nom", placeholder: "John Doe"
+  = f.input :title, label: "Titre de la présentation", placeholder: "VCR"
+  = f.input :email, placeholder: "hello@world.com"
+  = f.input :difficulty, label: "Niveau", collection: [['facile', 1], ['intermédiaire', 2], ['avancé', 3]]
+  = f.input :length, collection: [['5 min (lightning)', 5], ['20 min', 20]], label: "Durée"
+  = f.button :submit, "Créer"
+  .clear
+
 .presentations
+  %h2 Talks proposés pour le prochain meetup:
+  - @presentations.each do |presentation|
+    %p.presentation-el
+      = presentation.name
+      nous propose de parler de
+      = presentation.title
   %h2 Talks ayant eu lieu :
   - @old_presentations.each do |presentation|
     %p.presentation-el
@@ -8,20 +25,5 @@
       #{presentation.video_url.present? ? link_to(presentation.title, presentation.video_url) : presentation.title} (le #{presentation.occured_at})
       #{presentation.slides_url.present? ? link_to("(slides)", presentation.slides_url) : ""}
   
-  %h2 Talks proposés :
-  - @presentations.each do |presentation|
-    %p.presentation-el
-      = presentation.name
-      nous propose de parler de
-      = presentation.title
     
 
-= simple_form_for @presentation do |f|
-  %h2 Une idée de présentation ?
-  = f.input :name, placeholder: "John Doe"
-  = f.input :title, placeholder: "VCR"
-  = f.input :email, placeholder: "hello@world.com"
-  = f.input :difficulty, :collection => [['easy', 1], ['middle', 2], ['advanced', 3]]
-  = f.input :length, label: "Length (in minutes)"
-  = f.button :submit, "Créer"
-  .clear
