@@ -13,7 +13,7 @@
 .presentations
   %h2 Talks proposés pour le prochain meetup:
   - @presentations.each do |presentation|
-    %p.presentation-el
+    %p.presentation-el{class: format_oldness(presentation.created_at)}
       = presentation.name
       nous propose de parler de
       = presentation.title
