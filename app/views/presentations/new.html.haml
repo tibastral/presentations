@@ -10,23 +10,34 @@
   = f.button :submit, "Créer"
   .clear
 
+.faq
+  %details
+    %summary
+      Faq
+    %dl
+      %dt Je suis un newbie, et j'ai peeeeuuur de présenter
+      %dd À Paris.rb on n'est pas là pour se moquer des novices. Nous serons TOUJOURS ravis d'accueillir les talks débutants comme confirmés
+    %dl
+      %dt Je voudrais faire une présentation de + de 20 minutes
+      %dd Les présentations sont cronometrées, dans le but de ne pas trop fatiguer les rubyistes qui vous écoutent, et des études ont prouvé que les 2 meilleurs timings sont : 5 minutes et 20 minutes
+    %dl
+      %dt Je veux présenter ma société, ou mon produit
+      %dd
+        Nous sommes ici pour parler de ruby, de rails, et du monde des startups
+        sur Paris. Pour faire la promotion d'une société, d'un produit, ou
+        rechercher un profil, la coutume est d'aider la communauté en sponsorisant
+        les évènements ruby. Pour plus de détails, n'hésitez pas à envoyer un email à
+        <a href="mailto:thibaut@milesrock.com">Thibaut</a>
+
+    %p
+      Si vous avez d'autres questions, n'hésitez pas à envoyer un mail à <a href="mailto:thibaut@milesrock.com">Thibaut</a>
+
 .presentations
   %h2 Talks proposés pour le prochain meetup:
-  - @presentations.each do |presentation|
-    .presentation-el{class: format_oldness(presentation.created_at)}
-      .presentation
-        %h3
-          = presentation.title
-          - if presentation.length && presentation.length < 6
-            (lightning talk)
-          - else
-            (durée : #{presentation.length || 20} min)
-        proposé par #{presentation.name}
-      .difficulty
-        Niveau requis:
-        - (presentation.difficulty || 1).to_i.times do
-          = image_tag('ruby.png')
-      .clear
+  = render @presentations.select{|e| e.created_at > 2.month.ago}
+  %details
+    %summary Talks proposés il y a longtemps n'ayant jamais été présentés
+    = render @presentations.select{|e| e.created_at <= 2.month.ago}
   %h2 Talks ayant eu lieu :
   - @old_presentations.each do |presentation|
     %p.presentation-el
