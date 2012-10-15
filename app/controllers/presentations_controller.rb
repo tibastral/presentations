@@ -13,4 +13,8 @@ class PresentationsController < ApplicationController
       render :action => :new
     end
   end
+
+  def show
+    @presentation = Presentation.find(params[:id])
+  end
 end

@@ -21,6 +21,7 @@ end
 
 gem "thin"
 gem 'jquery-rails'
+gem 'rdiscount'
 
 gem 'haml'
 gem 'simple_form'

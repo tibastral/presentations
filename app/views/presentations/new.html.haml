@@ -45,6 +45,6 @@
       nous a parlé de
       #{presentation.video_url.present? ? link_to(presentation.title, presentation.video_url) : presentation.title} (le #{presentation.occured_at})
       #{presentation.slides_url.present? ? link_to("(slides)", presentation.slides_url) : ""}
-  
+      #{presentation.notes.present? ? link_to("(notes)", presentation) : ""}
     
 
