@@ -25,7 +25,6 @@ gem 'rdiscount'
 
 gem 'haml'
 gem 'simple_form'
-gem 'heroku'
 gem 'squeel'
 
 gem 'activeadmin'
