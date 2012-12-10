@@ -1,0 +1,15 @@
+.presentation-el {
+  background-color  : #EEE;
+  border            : 1px solid #CCC;
+  margin-bottom     : 20px;
+  padding           : 1em;
+  @include border-radius(3px);
+}
+
+.more-than-one-month-old {
+  opacity: .7;
+}
+
+.more-than-two-month-old {
+  opacity: .3
+}

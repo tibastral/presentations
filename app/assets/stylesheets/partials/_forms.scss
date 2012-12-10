@@ -1,0 +1,34 @@
+.simple_form {
+    background-color : #f9e497;
+    border           : 1px solid #12044b;
+    border-radius    : 10px;
+    padding          : 10px;
+    label, input {
+        @include vendor(box-sizing, border-box);
+    }
+    label {
+        width:  30%;
+    }
+    input[type=text], input[type=email] {
+        width       : 70%;
+        font-size   : 1.2em;
+        padding     : .4em;
+    }
+}
+
+
+@include small-screen {
+    .simple_form {
+        label, input[type=text], input[type=email], input[type=submit], select {
+            width: 100%;
+        }
+        label {
+            margin-top: 1em;
+            text-align: center;
+        }
+        input[type=text], input[type=email] {
+            font-size   : 1.2em;
+            padding: .4em;
+        }
+    }
+}

@@ -7,8 +7,8 @@
   = f.input :email, placeholder: "hello@world.com"
   = f.input :difficulty, label: "Niveau", collection: [['facile', 1], ['intermédiaire', 2], ['avancé', 3]]
   = f.input :length, collection: [['5 min (lightning)', 5], ['20 min', 20]], label: "Durée"
-  = f.button :submit, "Créer"
-  .clear
+  .text-right
+    = f.button :submit, "Créer", class: 'btn'
 
 .faq
   %details
@@ -46,5 +46,5 @@
       #{presentation.video_url.present? ? link_to(presentation.title, presentation.video_url) : presentation.title} (le #{presentation.occured_at})
       #{presentation.slides_url.present? ? link_to("(slides)", presentation.slides_url) : ""}
       #{presentation.notes.present? ? link_to("(notes)", presentation) : ""}
-    
+
 
