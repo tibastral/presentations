@@ -1,6 +1,6 @@
 .presentation-el {
-  background-color  : #EEE;
-  border            : 1px solid #CCC;
+  background-color  : $greyLighter;
+  border            : 1px solid $grey;
   margin-bottom     : 20px;
   padding           : 1em;
   @include border-radius(3px);
@@ -11,5 +11,7 @@
 }
 
 .more-than-two-month-old {
-  opacity: .3
+  opacity: .7;
+  background-color  : white;
+
 }

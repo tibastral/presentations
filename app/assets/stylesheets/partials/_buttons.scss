@@ -1,5 +1,6 @@
 .btn {
-    background-color: $light-grey;
+    cursor: pointer;
+    background-color: $greyVeryLighter;
     border          : 1px solid #b5b5b5;
     text-shadow     : 0 1px 0 white;
     padding         : 0.4em 0.9em;
@@ -9,6 +10,8 @@
     font-size: 1em;
 }
 
-.btn {
-    cursor: pointer;
+.btn:active, .btn--active {
+    background-color: #ebebeb;
+    @include background-image(linear-gradient(top, #dad9d9, #ebebeb));
+    @include box-shadow(inset 0 1px 5px rgba(0,0,0,0.22),0 1px 0 rgba(255,255,255,0.4));
 }

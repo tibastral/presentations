@@ -1,9 +1,11 @@
 .faq {
     margin          : 1em 0;
     padding         : 1em;
-    border          : 1px solid #ccc;
-    background-color: #eee;
+    border          : 1px solid $grey;
+    background-color: $greyLighter;
+    @include border-radius(3px);
     summary {
-        cursor: pointer;
+        cursor : pointer;
+        outline: none;
     }
 }
