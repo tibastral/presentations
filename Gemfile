@@ -13,7 +13,8 @@ gem 'pg'
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'sass-rails'
-gem "compass"
+gem 'compass-rails'     , '~> 1.0.3'
+
 group :assets do
   gem 'coffee-rails'
   gem 'uglifier'
@@ -44,7 +45,7 @@ gem 'rails-i18n'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
-  # gem 'linecache19', :git => 'https://github.com/mark-moseley/linecache.git' 
+  # gem 'linecache19', :git => 'https://github.com/mark-moseley/linecache.git'
   # gem 'ruby-debug-base19', :git => 'https://github.com/mark-moseley/ruby-debug.git'
   # Pretty printed test output
   gem 'turn', :require => false

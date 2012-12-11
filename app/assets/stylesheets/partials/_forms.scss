@@ -1,0 +1,65 @@
+.simple_form {
+    background-color : #f9e497;
+    border           : 1px solid darken(#f9e497, 20%);
+    @include border-radius(5px);
+    padding          : 10px;
+    label, input[type=text], input[type=email] {
+        height        : 2em;
+        line-height   : 2em;
+        vertical-align: middle;
+        margin        : 0.2em 0;
+        font-size     : 1.2em;
+        @include vendor(box-sizing, border-box);
+    }
+    label {
+        width         :  30%;
+        padding-right : 1em;
+        text-align    : right;
+        display       : inline-block;
+    }
+    input[type=text], input[type=email] {
+        width       : 70%;
+        padding     : .4em;
+    }
+    .radio {
+        label {
+            width          : auto;
+            vertical-align : middle;
+            height         : auto;
+            padding-left   : 0.3em;
+            padding-right  : 1em;
+            cursor         : pointer;
+        }
+    }
+
+    select {
+      width: 15em;
+    }
+}
+
+
+@include small-screen {
+    .simple_form {
+        h2 {
+            margin-bottom: 0;
+        }
+        label, input[type=text], input[type=email], input[type=submit], select {
+            width: 100%;
+        }
+        label {
+            margin-top: 1em;
+            text-align: center;
+        }
+        input[type=text], input[type=email] {
+            font-size   : 1.2em;
+            padding: .4em;
+        }
+        .radio {
+            label {
+                margin: 0;
+            }
+            display    : block;
+            text-align : center;
+        }
+    }
+}
