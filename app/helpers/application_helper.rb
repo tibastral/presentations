@@ -1,7 +1,7 @@
 module ApplicationHelper
   def github_banner
     link_to "http://github.com/tibastral/presentations", :class => 'fork-on-github' do
-      image_tag "http://bit.ly/github-red-banner-right", :alt => "Fork me on GitHub"
+      image_tag "https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", :alt => "Fork me on GitHub"
     end
   end
 
