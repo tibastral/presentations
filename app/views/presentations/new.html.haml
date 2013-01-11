@@ -1,6 +1,6 @@
 %h1 Meetup ParisRb : Appel à présentations
 %h2 Retrouvez les présentations en vidéo sur la chaîne <a href="http://vimeo.com/parisrb" target="_blank">Vimeo</a> !
-= simple_form_for @presentation do |f|
+= simple_form_for presentation do |f|
   %h2 Une idée de présentation ?
   = f.input :name, label: "Nom", placeholder: "John Doe"
   = f.input :title, label: "Titre de la présentation", placeholder: "VCR : enregistrer vos requêtes réseau et les rejouer"
@@ -34,18 +34,16 @@
 
 .presentations
   %h2 Talks proposés pour le prochain meetup:
-  = render @presentations.select{|e| e.created_at > 2.month.ago}
+  = render presentations.select{|e| e.created_at > 2.month.ago}
   .faq
     %details
       %summary Talks proposés il y a longtemps n'ayant jamais été présentés
-      = render @presentations.select{|e| e.created_at <= 2.month.ago}
+      = render presentations.select{|e| e.created_at <= 2.month.ago}
   %h2 Talks ayant eu lieu :
-  - @old_presentations.each do |presentation|
+  - old_presentations.each do |presentation|
     %p.presentation-el
       %span.presenter= presentation.name
       nous a parlé de
       #{presentation.video_url.present? ? link_to(presentation.title, presentation.video_url) : presentation.title} (le #{presentation.occured_at})
       #{presentation.slides_url.present? ? link_to("(slides)", presentation.slides_url) : ""}
       #{presentation.notes.present? ? link_to("(notes)", presentation) : ""}
-
-
