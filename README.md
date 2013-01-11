@@ -1,4 +1,4 @@
-# Présentations ([Ruby Paris](http://www.rubyparis.org)) [![Build Status](https://travis-ci.org/tibastral/presentations.png)](https://travis-ci.org/tibastral/presentations)
+# Présentations ([Ruby Paris](http://www.rubyparis.org)) [![Build Status](https://travis-ci.org/tibastral/presentations.png?branch=master)](https://travis-ci.org/tibastral/presentations)
 
 ## Contributing
 
