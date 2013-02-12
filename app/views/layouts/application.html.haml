@@ -1,7 +1,7 @@
 !!! 5
 %html
   %head
-  %title Appel À Presentations
+  %title= [@title, "Paris.rb : Apéro Ruby à Paris"].compact.join(' | ')
   = stylesheet_link_tag    "application"
   = javascript_include_tag "application"
   %meta{"content" => 'text/html; charset=utf-8', "http-equiv" => 'Content-Type'}
@@ -11,6 +11,7 @@
   %body
     = github_banner
     .wrapper
+      = render 'layouts/session'
       - if notice
         .flash.notice= notice
       = yield

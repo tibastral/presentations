@@ -1,0 +1,5 @@
+- if current_user
+  .auth= link_to current_user.name, current_user.link
+  .logout= link_to "Se déconnecter", signout_path
+- else
+  .auth= link_to "S'identifier !", "/auth/meetup"
