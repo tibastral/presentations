@@ -9,9 +9,9 @@
   = csrf_meta_tags
 
   %body
+    = render 'layouts/session'
     = github_banner
     .wrapper
-      = render 'layouts/session'
       - if notice
         .flash.notice= notice
       = yield

@@ -1,12 +1,8 @@
 .flash {
     text-align                  : center;
     padding                     : 1em;
-    position                    : absolute;
-    top                         : 0;
     width                       : 50%;
-    left                        : 50%;
-    margin-left                 : -25%;
-    box-sizing                  : border-box;
+    margin                      : 0 auto;
     border                      : 1px solid #CCC;
     border-bottom-left-radius   : 0.5em;
     border-bottom-right-radius  : 0.5em;

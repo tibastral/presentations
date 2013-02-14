@@ -32,6 +32,6 @@ class PresentationsController < ApplicationController
   end
 
   def presentation
-    @presentation ||= Presentation.new
+    @presentation ||= Presentation.new(current_user ? {name: current_user.name} : {})
   end
 end

@@ -82,6 +82,7 @@ ActiveRecord::Schema.define(:version => 20130212095045) do
     t.string   "uid"
     t.string   "name"
     t.string   "link"
+    t.string   "photo_url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
