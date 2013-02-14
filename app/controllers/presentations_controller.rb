@@ -6,7 +6,7 @@ class PresentationsController < ApplicationController
 
   def create
     @presentation = Presentation.new(params[:presentation])
-
+    @presentation.user = current_user if current_user
     if @presentation.save
       redirect_to [:new, :presentation], :notice => 'Merci beaucoup pour cette proposition !'
     else
