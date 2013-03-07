@@ -23,3 +23,7 @@ end
 Then /^show me the page$/ do
   save_and_open_page
 end
+
+Given /^I have already posted with email "([^"]*)"$/ do |email|
+  User.first.update_attribute :email, email
+end

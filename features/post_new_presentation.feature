@@ -19,3 +19,12 @@ Feature: Post new presentation
       And I press "Créer"
     Then I should be thanked successfully
       And I should see a presentation from "Foo Bar"
+
+  Scenario: Signed in with meetup and already known email
+    Given I am signed in with provider "Meetup"
+      And I have already posted with email "foo@bar.com"
+      And I am on the homepage
+    When I fill in "Titre" with "Presentation sur cucumber"
+      And I press "Créer"
+    Then I should be thanked successfully
+      And I should see a presentation from "Foo Bar"
