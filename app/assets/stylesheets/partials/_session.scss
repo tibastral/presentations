@@ -1,0 +1,33 @@
+#session {
+  border-bottom: 1px solid #ddd;
+  background: #eee;
+
+  .wrapper {
+    background: transparent image-url('meetup.png') left center no-repeat;
+    line-height: 40px;
+  }
+
+  .auth {
+    img {
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+      margin-right: 0.5em;
+    }
+    a {
+      color: #888;
+    }
+  }
+
+  .auth, .login {
+    margin-left: 50px;
+  }
+
+  .auth, .login, .logout {
+    display: inline-block;
+  }
+
+  .logout a {
+    margin-left: 1em;
+  }
+}

@@ -6,7 +6,7 @@ class PresentationsController < ApplicationController
 
   def create
     @presentation = Presentation.new(params[:presentation])
-
+    @presentation.user = current_user if current_user
     if @presentation.save
       redirect_to [:new, :presentation], :notice => 'Merci beaucoup pour cette proposition !'
     else
@@ -32,6 +32,6 @@ class PresentationsController < ApplicationController
   end
 
   def presentation
-    @presentation ||= Presentation.new
+    @presentation ||= Presentation.new(current_user ? {name: current_user.name, email: current_user.email} : {})
   end
 end

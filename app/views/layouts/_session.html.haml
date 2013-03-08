@@ -1,0 +1,9 @@
+#session
+  .wrapper
+    - if current_user
+      .auth
+        = image_tag current_user.photo_url, height: 26
+        = link_to current_user.name, current_user.link
+      .logout= link_to "Se déconnecter", signout_path
+    - else
+      .login= link_to "S'identifier !", "/auth/meetup"
