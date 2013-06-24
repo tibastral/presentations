@@ -20,7 +20,7 @@ group :assets do
 end
 
 gem "thin"
-gem 'jquery-rails'
+gem "jquery-rails", "2.3.0"
 gem 'rdiscount'
 
 gem 'haml'
