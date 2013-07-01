@@ -34,7 +34,7 @@
 
 .presentations
   %h2 Talks proposés pour le prochain meetup:
-  = render presentations.select{|e| e.created_at > 2.month.ago}
+  = render presentations.select{|presentation| presentation.created_at > 2.month.ago}
   .faq
     %details
       %summary Talks proposés il y a longtemps n'ayant jamais été présentés
@@ -47,3 +47,9 @@
       #{presentation.video_url.present? ? link_to(presentation.title, presentation.video_url) : presentation.title} (le #{presentation.occured_at})
       #{presentation.slides_url.present? ? link_to("(slides)", presentation.slides_url) : ""}
       #{presentation.notes.present? ? link_to("(notes)", presentation) : ""}
+.sponsors 
+  %h2 Sponsors
+  - sponsors.each do |sponsor|
+    .sponsor
+      - if sponsor.logo.present?
+        = image_tag(sponsor.logo.thumbnail.url, :alt => sponsor.name)

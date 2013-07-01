@@ -27,6 +27,9 @@ gem 'haml'
 gem 'simple_form'
 gem 'squeel'
 
+gem 'cloudinary'
+gem 'carrierwave'
+
 gem 'activeadmin'
 
 gem 'rails-i18n'
