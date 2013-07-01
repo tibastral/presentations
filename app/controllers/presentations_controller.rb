@@ -1,5 +1,5 @@
 class PresentationsController < ApplicationController
-  helper_method :presentations, :old_presentations, :presentation
+  helper_method :presentations, :old_presentations, :presentation, :sponsors
 
   def new
   end
@@ -28,6 +28,11 @@ class PresentationsController < ApplicationController
   def presentations
     @presentations ||= Presentation
       .where{ occured_at == nil }
+      .order{ created_at.desc }
+  end
+
+  def sponsors
+    @sponsors ||= Sponsor
       .order{ created_at.desc }
   end
 
