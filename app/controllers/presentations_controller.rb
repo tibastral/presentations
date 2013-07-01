@@ -32,8 +32,7 @@ class PresentationsController < ApplicationController
   end
 
   def sponsors
-    @sponsors ||= Sponsor
-      .order{ created_at.desc }
+    @sponsors ||= Sponsor.where{from <= Date.today}.where{upto >= Date.today}.order{ created_at.desc }
   end
 
   def presentation
