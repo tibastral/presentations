@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hmdgjw97p
+  api_key: '426858336164834'
+  api_secret: zxgYSZUnq2N84gHKkhYxfHc5btc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hmdgjw97p
+  api_key: '426858336164834'
+  api_secret: zxgYSZUnq2N84gHKkhYxfHc5btc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hmdgjw97p
+  api_key: '426858336164834'
+  api_secret: zxgYSZUnq2N84gHKkhYxfHc5btc
+  enhance_image_tag: true
+  static_image_support: false
