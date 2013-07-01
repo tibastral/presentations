@@ -20,7 +20,7 @@ test: &test
   pool: 5
   min_messages: WARNING
 
-test: &test
+production:
   adapter: postgresql
   encoding: unicode
   database: presentations_production
