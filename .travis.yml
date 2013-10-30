@@ -1,4 +1,7 @@
 language: ruby
 rvm:
   1.9.3
-before_script: RAILS_ENV=test rake db:migrate --trace
+before_script:
+  - cp config/travis.database.yml config/database.yml
+  - psql -c 'create database presentations_test;' -U postgres
+  - RAILS_ENV=test rake db:migrate --trace
