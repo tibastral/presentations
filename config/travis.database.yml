@@ -1,0 +1,13 @@
+# Travis CI requires the username `postgres` when using postgresql as
+# the database service. This however clashes with the common postgresql
+# installation on Macs (i.e. the postgres username is the system username).
+test: &test
+  adapter: postgresql
+  username: postgres
+  encoding: unicode
+  database: presentations_test
+  pool: 5
+  min_messages: WARNING
+
+cucumber:
+  <<: *test
